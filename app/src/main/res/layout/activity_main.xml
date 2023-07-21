@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@mipmap/img" />
+        android:src="@drawable/dollar_symbol_svgrepo_com" />
 
     <Spinner
         android:id="@+id/spinnerUno"

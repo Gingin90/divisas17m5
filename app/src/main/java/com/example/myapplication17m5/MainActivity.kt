@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
             val divisaCambio= binding.spinnerDos.selectedItem.toString()
           Log.d("estamos en el init listener","  $monto,$divisaActual,$divisaCambio")
             val resultado = conversorDivisas(monto,divisaActual,divisaCambio)
+
         }
         binding.buttonResert.setOnClickListener{
             limpiar()
