@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initListener() {
+
         binding.buttonConvert.setOnClickListener{
             val monto = binding.editTextEntrada.text.toString().toDouble()
             val divisaActual= binding.spinnerUno.selectedItem.toString()
@@ -36,44 +37,45 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun conversorDivisas(monto:Double,divisaActual :String,divisaCambio: String): Double {
+        var resultado = monto
         when (divisaActual) {
             "USD" -> {
                 if (divisaCambio == "CLP") {
-                    monto * 817
+                    resultado = monto * 817
                 } else if (divisaCambio == "USD") {
-                    monto * 1
+                    resultado = monto * 1
                 } else if (divisaCambio == "EUR") {
-                    monto * 0.98
+                    resultado = monto * 0.98
                 }
             }
 
             "CLP" -> if (divisaCambio == "CLP") {
-                monto * 1
+                resultado = monto * 1
             } else if (divisaCambio == "USD") {
                 monto * 0.001
             } else if (divisaCambio == "EUR") {
-                monto * 0.001
+                resultado = monto * 0.001
             }
 
         "EUR" -> if (divisaCambio == "CLP") {
-            monto * 910
+            resultado = monto * 910
         } else if (divisaCambio == "USD") {
-            monto * 1.11
+            resultado = monto * 1.11
         } else if (divisaCambio == "EUR") {
-            monto * 1
+            resultado = monto * 1
         }
 
 
-            else -> { monto
+            else -> { resultado = monto
             }
         }
 
-        return monto
+        return resultado
     }
       fun limpiar(){
 
             binding.textVinTo.text = ""
-        binding.editTextEntrada.setText("")
+            binding.editTextEntrada.setText("")
 
         }
 
