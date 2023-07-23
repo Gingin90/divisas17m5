@@ -55,13 +55,14 @@ class MainActivity : AppCompatActivity() {
                 monto * 0.001
             }
 
-            "EUR" -> if (divisaCambio == "CLP") {
-                monto * 910
-            } else if (divisaCambio == "USD") {
-                monto * 1.11
-            } else if (divisaCambio == "EUR") {
-                monto * 1
-            }
+        "EUR" -> if (divisaCambio == "CLP") {
+            monto * 910
+        } else if (divisaCambio == "USD") {
+            monto * 1.11
+        } else if (divisaCambio == "EUR") {
+            monto * 1
+        }
+
 
             else -> { monto
             }
