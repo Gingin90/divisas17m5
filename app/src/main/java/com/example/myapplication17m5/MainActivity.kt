@@ -24,11 +24,12 @@ class MainActivity : AppCompatActivity() {
     private fun initListener() {
 
         binding.buttonConvert.setOnClickListener{
-            val monto = binding.editTextEntrada.text.toString().toDouble()
-            val divisaActual= binding.spinnerUno.selectedItem.toString()
-            val divisaCambio= binding.spinnerDos.selectedItem.toString()
+            val monto :Double = binding.editTextEntrada.text.toString().toDouble()
+            val divisaActual: String= binding.spinnerUno.selectedItem.toString()
+            val divisaCambio :String = binding.spinnerDos.selectedItem.toString()
           Log.d("estamos en el init listener","  $monto,$divisaActual,$divisaCambio")
-            val resultado = conversorDivisas(monto,divisaActual,divisaCambio)
+            val resultado :Double = conversorDivisas(monto,divisaActual,divisaCambio)
+            binding.textVinTo.text= resultado.toString()
 
         }
         binding.buttonResert.setOnClickListener{
